@@ -41,7 +41,7 @@ def gen_corpus(file_loc):
         file = file.replace("\\", "/")
         with open (file, "r", encoding="utf-8", errors='ignore') as f:
             text = f.read()
-            segs =  text.replace("\n\n", " ").split(".")
+            segs =  text.split("\n\n")
             for seg in segs:
                 original = seg.strip()+"."
                 original = original.replace("\n", "<br>")
