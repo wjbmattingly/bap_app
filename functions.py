@@ -44,6 +44,7 @@ def gen_corpus(file_loc):
             segs =  text.replace("\n\n", " ").split(".")
             for seg in segs:
                 original = seg.strip()+"."
+                original = original.replace("\n", "<br>")
                 seg = remove_puncs(original)
                 texts.append(seg)
                 final_files.append((file, original))
