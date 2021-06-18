@@ -87,7 +87,7 @@ def main(model):
             if final_text[:4] == "<br>":
                 final_text = final_text[4:]
             texts.append(final_text)
-            transcript = f'<a target="_blank" onclick="find({text[1]});" href="https://collections.ushmm.org/oh_findingaids/{rg_num}_trs_en.pdf#page6">{rg_num}</a>'
+            transcript = f'{rg_num}'
             rg.append(transcript)
             train_data.append((text[1], keyword))
         st.write(f'There are {len(values)} results based on your parameters...')
