@@ -39,7 +39,7 @@ def gen_corpus(file_loc):
     final_files = []
     for file in files:
         file = file.replace("\\", "/")
-        with open (file, "r") as f:
+        with open (file, "r", encoding="utf-8") as f:
             text = f.read()
             segs =  text.replace("\n\n", " ").split(".")
             for seg in segs:
