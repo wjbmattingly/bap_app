@@ -35,7 +35,7 @@ def remove_puncs(text):
 
 def gen_corpus(file_loc):
     texts = []
-    files = glob.glob(file_loc)
+    files = glob.glob(file_loc)[0:300]
     final_files = []
     for file in files:
         file = file.replace("\\", "/")
